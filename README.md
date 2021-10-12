@@ -27,7 +27,7 @@ docker build -t lmcas_tutorial .
 docker run -it lmcas_tutorial
 ```
 # LMCAS Artifacts
-We provide the source code of the apps used in the evaluation `after adding the neck`, which is indicated through the special function call `klee_dump_memory` (i.e., in `wc` the neck is [HERE](https://github.com/Mohannadcse/LMCAS_Demo/blob/main/LMCAS_tutorial/source_code_files/wc.c#L746)). But you need to compile these programs using `wllvm`. To avoid compilation, we also provided the bitcode of these apps. The bitcode of the apps can be found under the directory [./LMCAS_Docker/LMCAS_tutorial/bitcode_files]().
+We provide the source code of the apps used in the evaluation `after adding the neck`, which is indicated through the special function call `klee_dump_memory` (i.e., in `wc` the neck is [HERE](https://github.com/Mohannadcse/LMCAS_Demo/blob/main/LMCAS_tutorial/source_code_files/wc.c#L746)). But you need to compile these programs using `wllvm`. To avoid compilation, we also provided the bitcode of these apps. The bitcode of the apps can be found under the directory [LMCAS_Demo/LMCAS_tutorial/bitcode_files]().
 
 # Running LMCAS
 For debloating the artifacts using LMCAS, you need to use the script `runDemo.sh` as follows:
