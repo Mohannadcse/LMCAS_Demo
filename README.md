@@ -24,7 +24,7 @@ The implementation of LMCAS is unavaiable, we are working on licensing aspect to
 # Building LMCAS Docker Machine
 Execute the following commands to build and run LMCAS demo. The build process takes sometime because it involves downloading and building both of LLVM and KLEE.  
 ```shell
-cd LMCAS_tutorial
+cd LMCAS_Docker
 docker build -t lmcas_tutorial .
 docker run -it lmcas_tutorial
 ```
