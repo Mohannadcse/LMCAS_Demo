@@ -29,7 +29,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "include"
   "/KLEE/include"
-  "/usr/lib/llvm-6.0/include"
+  "/usr/lib/llvm-10/include"
   )
 
 # Targets to which this target links.

@@ -100,7 +100,7 @@ bin/klee: lib/libkleaverExpr.a
 bin/klee: lib/libkleeSupport.a
 bin/klee: /usr/lib/x86_64-linux-gnu/libz.so
 bin/klee: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-bin/klee: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+bin/klee: /usr/lib/llvm-10/lib/libLLVM-10.so
 bin/klee: tools/klee/CMakeFiles/klee.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/klee"
 	cd /build/KLEE/tools/klee && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/klee.dir/link.txt --verbose=$(VERBOSE)

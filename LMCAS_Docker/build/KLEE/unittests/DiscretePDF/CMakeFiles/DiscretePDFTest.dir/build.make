@@ -98,7 +98,7 @@ unittests/DiscretePDFTest: lib/libkleaverExpr.a
 unittests/DiscretePDFTest: lib/libkleeSupport.a
 unittests/DiscretePDFTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/DiscretePDFTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-unittests/DiscretePDFTest: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+unittests/DiscretePDFTest: /usr/lib/llvm-10/lib/libLLVM-10.so
 unittests/DiscretePDFTest: /usr/lib/x86_64-linux-gnu/libz3.so
 unittests/DiscretePDFTest: unittests/DiscretePDF/CMakeFiles/DiscretePDFTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../DiscretePDFTest"

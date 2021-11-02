@@ -97,7 +97,7 @@ unittests/TimeTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/TimeTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
 unittests/TimeTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/TimeTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-unittests/TimeTest: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+unittests/TimeTest: /usr/lib/llvm-10/lib/libLLVM-10.so
 unittests/TimeTest: unittests/Time/CMakeFiles/TimeTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../TimeTest"
 	cd /build/KLEE/unittests/Time && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TimeTest.dir/link.txt --verbose=$(VERBOSE)

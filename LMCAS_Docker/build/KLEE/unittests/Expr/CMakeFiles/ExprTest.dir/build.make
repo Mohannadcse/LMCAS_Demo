@@ -126,7 +126,7 @@ unittests/ExprTest: lib/libkleeSupport.a
 unittests/ExprTest: lib/libkleeBasic.a
 unittests/ExprTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/ExprTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-unittests/ExprTest: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+unittests/ExprTest: /usr/lib/llvm-10/lib/libLLVM-10.so
 unittests/ExprTest: /usr/lib/x86_64-linux-gnu/libz3.so
 unittests/ExprTest: unittests/Expr/CMakeFiles/ExprTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../ExprTest"

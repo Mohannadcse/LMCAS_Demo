@@ -171,7 +171,7 @@ bin/klee-replay: tools/klee-replay/CMakeFiles/klee-replay.dir/build.make
 bin/klee-replay: lib/libkleeBasic.a
 bin/klee-replay: /usr/lib/x86_64-linux-gnu/libz.so
 bin/klee-replay: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-bin/klee-replay: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+bin/klee-replay: /usr/lib/llvm-10/lib/libLLVM-10.so
 bin/klee-replay: tools/klee-replay/CMakeFiles/klee-replay.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../../bin/klee-replay"
 	cd /build/KLEE/tools/klee-replay && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/klee-replay.dir/link.txt --verbose=$(VERBOSE)

@@ -46,16 +46,12 @@ klee/Statistics.h
 vector
 -
 
-/usr/lib/llvm-6.0/include/llvm/Support/DataTypes.h
+/usr/lib/llvm-10/include/llvm-c/DataTypes.h
 cmath
 -
 math.h
 -
-cinttypes
--
 inttypes.h
--
-cstdint
 -
 stdint.h
 -
@@ -71,6 +67,10 @@ stdlib.h
 -
 sys/types.h
 -
+
+/usr/lib/llvm-10/include/llvm/Support/DataTypes.h
+llvm-c/DataTypes.h
+/usr/lib/llvm-10/include/llvm/Support/llvm-c/DataTypes.h
 
 include/klee/Config/config.h
 

@@ -22,8 +22,8 @@ unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /googletest-release-1.7.0/in
 unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /googletest-release-1.7.0/include/gtest/internal/gtest-string.h
 unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /googletest-release-1.7.0/include/gtest/internal/gtest-tuple.h
 unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /googletest-release-1.7.0/include/gtest/internal/gtest-type-util.h
-unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-6.0/include/llvm/Config/llvm-config.h
-unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-6.0/include/llvm/Support/Casting.h
-unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-6.0/include/llvm/Support/Compiler.h
-unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-6.0/include/llvm/Support/type_traits.h
+unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-10/include/llvm/Config/llvm-config.h
+unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-10/include/llvm/Support/Casting.h
+unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-10/include/llvm/Support/Compiler.h
+unittests/Ref/CMakeFiles/RefTest.dir/RefTest.cpp.o: /usr/lib/llvm-10/include/llvm/Support/type_traits.h
 

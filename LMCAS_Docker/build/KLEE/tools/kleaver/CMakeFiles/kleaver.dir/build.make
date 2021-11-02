@@ -96,7 +96,7 @@ bin/kleaver: lib/libkleaverExpr.a
 bin/kleaver: lib/libkleeSupport.a
 bin/kleaver: /usr/lib/x86_64-linux-gnu/libz.so
 bin/kleaver: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-bin/kleaver: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+bin/kleaver: /usr/lib/llvm-10/lib/libLLVM-10.so
 bin/kleaver: /usr/lib/x86_64-linux-gnu/libz3.so
 bin/kleaver: tools/kleaver/CMakeFiles/kleaver.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/kleaver"

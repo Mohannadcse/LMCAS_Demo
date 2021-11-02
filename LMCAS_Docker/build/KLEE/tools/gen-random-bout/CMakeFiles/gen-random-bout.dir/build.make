@@ -93,7 +93,7 @@ bin/gen-random-bout: tools/gen-random-bout/CMakeFiles/gen-random-bout.dir/build.
 bin/gen-random-bout: lib/libkleeBasic.a
 bin/gen-random-bout: /usr/lib/x86_64-linux-gnu/libz.so
 bin/gen-random-bout: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-bin/gen-random-bout: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+bin/gen-random-bout: /usr/lib/llvm-10/lib/libLLVM-10.so
 bin/gen-random-bout: tools/gen-random-bout/CMakeFiles/gen-random-bout.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/gen-random-bout"
 	cd /build/KLEE/tools/gen-random-bout && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gen-random-bout.dir/link.txt --verbose=$(VERBOSE)

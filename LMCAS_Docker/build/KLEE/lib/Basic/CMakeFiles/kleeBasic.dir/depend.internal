@@ -9,5 +9,6 @@ lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o
  /KLEE/include/klee/Statistic.h
  /KLEE/include/klee/Statistics.h
  /KLEE/lib/Basic/Statistics.cpp
- /usr/lib/llvm-6.0/include/llvm/Support/DataTypes.h
+ /usr/lib/llvm-10/include/llvm-c/DataTypes.h
+ /usr/lib/llvm-10/include/llvm/Support/DataTypes.h
  include/klee/Config/config.h

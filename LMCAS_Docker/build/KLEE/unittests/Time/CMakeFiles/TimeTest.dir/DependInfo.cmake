@@ -19,7 +19,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/lib/llvm-6.0/include"
+  "/usr/lib/llvm-10/include"
   "/googletest-release-1.7.0/include"
   "include"
   "/KLEE/include"

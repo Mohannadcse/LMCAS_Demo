@@ -36,8 +36,7 @@ if [ "$F" == "" ] || [ "$args" == "" ]; then
     usage
 fi
 
-echo "Bitcode File is $F";
-echo "Args is $args";
+echo "Supplied Inputs: $args";
 
 app=$(basename $F .bc)
 appFullPath=$(realpath $F)
@@ -47,42 +46,41 @@ cd debloate_${app}
 
 cp $appFullPath ${app}_orig.bc
 
-#echo "Run KLEE..."
+echo "...Run KLEE(Partial Interpreter)..."
 
-klee --libc=uclibc --posix-runtime --dump-file gbls.txt $appFullPath $args
-klee --libc=uclibc --posix-runtime --dump-file bbs.txt --dump-bbs $appFullPath $args
+klee --libc=uclibc --posix-runtime --dump-file gbls.txt $appFullPath $args > /dev/null 2>&1
 
 #I add the file name to the stringVars to exclude the lines that contain the file name
 bitcodeName=`basename $F`
 sed -i "1i$bitcodeName" stringVars.txt
 
-#echo "Run Constant Conversion..."
-opt-6.0 -load /build/LLVM_Passes/Debloat/libLLVMDebloat.so -debloat \
+echo "...Run Constant Conversion..."
+opt-10 -load /build/LLVM_Passes/Debloat/libLLVMDebloat.so -debloat \
     -globals=gbls.txt\
     -plocals=primitiveLocals.txt \
 	-clocals=customizedLocals.txt\
     -ptrStructlocals=ptrToStructLocals.txt \
     -ptrToPrimLocals=ptrToPrimitiveLocals.txt \
     -stringVars=stringVars.txt  \
- 	-bbfile=bbs.txt ${app}_orig.bc -verify -o ${app}_cc.bc
+ 	-bbfile=bbs.txt -appName=${app} ${app}_orig.bc -verify -o ${app}_cc.bc
 
-#echo "Run MultiStage Simplifications..."
-opt-6.0 -constprop ${app}_cc.bc -o ${app}_cp.bc
-opt-6.0 -strip -simplifycfg ${app}_cp.bc -o ${app}_ps.bc
-opt-6.0 -load /build/LLVM_Passes/Debloat/libLLVMDebloat.so -debloat -cleanUp \
+echo "...Run MultiStage Simplifications..."
+opt-10 -constprop ${app}_cc.bc -o ${app}_cp.bc
+opt-10 -strip -simplifycfg ${app}_cp.bc -o ${app}_ps.bc
+opt-10 -load /build/LLVM_Passes/Debloat/libLLVMDebloat.so -debloat -cleanUp \
     ${app}_ps.bc -verify -o ${app}_cu.bc
 
 
-echo "Generate binary files..."
+echo "Generate specialized program..."
 
 tcpdumpFlg=0
 if [[ $app == *"tcpdump"* ]]
 then
-    clang-6.0 ${app}_orig.bc -libverbs -o ${app}_orig
-    clang-6.0 ${app}_cc.bc -libverbs -o ${app}_cc
-    clang-6.0 ${app}_cp.bc -libverbs -o ${app}_cp
-    clang-6.0 ${app}_ps.bc -libverbs -o ${app}_ps
-    clang-6.0 ${app}_cu.bc -libverbs -o ${app}_cu
+    clang-10 ${app}_orig.bc -libverbs -o ${app}_orig > /dev/null 2>&1
+    clang-10 ${app}_cc.bc -libverbs -o ${app}_cc > /dev/null 2>&1
+    clang-10 ${app}_cp.bc -libverbs -o ${app}_cp > /dev/null 2>&1
+    clang-10 ${app}_ps.bc -libverbs -o ${app}_ps > /dev/null 2>&1
+    clang-10 ${app}_cu.bc -libverbs -o ${app}_cu > /dev/null 2>&1
     tcpdumpFlg=1
 fi
 
@@ -91,21 +89,21 @@ fi
 objdumpFlg=0
 if [[ $app == *"objdump"* ]]
 then
-    clang-6.0 ${app}_orig.bc -ldl -o ${app}_orig
-    clang-6.0 ${app}_cc.bc -ldl -o ${app}_cc
-    clang-6.0 ${app}_cp.bc -ldl -o ${app}_cp
-    clang-6.0 ${app}_ps.bc -ldl -o ${app}_ps
-    clang-6.0 ${app}_cu.bc -ldl -o ${app}_cu
+    clang-10 ${app}_orig.bc -ldl -o ${app}_orig
+    clang-10 ${app}_cc.bc -ldl -o ${app}_cc
+    clang-10 ${app}_cp.bc -ldl -o ${app}_cp
+    clang-10 ${app}_ps.bc -ldl -o ${app}_ps
+    clang-10 ${app}_cu.bc -ldl -o ${app}_cu
     objdumpFlg=1
 fi
 
 if [[ $tcpdumpFlg == 0 && $objdumpFlg == 0 ]]
 then
-   llc-6.0 -filetype obj ${app}_orig.bc
-   llc-6.0 -filetype obj ${app}_cc.bc
-   llc-6.0 -filetype obj ${app}_cp.bc
-   llc-6.0 -filetype obj ${app}_ps.bc
-   llc-6.0 -filetype obj ${app}_cu.bc
+   llc-10 -filetype obj ${app}_orig.bc
+   llc-10 -filetype obj ${app}_cc.bc
+   llc-10 -filetype obj ${app}_cp.bc
+   llc-10 -filetype obj ${app}_ps.bc
+   llc-10 -filetype obj ${app}_cu.bc
 fi
 
 
@@ -152,10 +150,10 @@ size_cu=`echo $runSize | cut -d ' ' -f10`
 
 
 #echo "Statistical info..."
-opt-6.0 -load /build/LLVM_Passes/Profiler/libLLVMPprofiler.so \
+opt-10 -load /build/LLVM_Passes/Profiler/libLLVMPprofiler.so \
  -Pprofiler -size=${size_orig} -o /dev/null ${app}_orig.bc
 
-opt-6.0 -load /build/LLVM_Passes/Profiler/libLLVMPprofiler.so \
+opt-10 -load /build/LLVM_Passes/Profiler/libLLVMPprofiler.so \
  -Pprofiler -size=${size_cu} -o /dev/null ${app}_cu.bc
 
 #cat report.csv

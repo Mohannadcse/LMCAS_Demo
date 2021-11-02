@@ -8,6 +8,7 @@ lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /KLEE/include/klee/Config/V
 lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /KLEE/include/klee/Statistic.h
 lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /KLEE/include/klee/Statistics.h
 lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /KLEE/lib/Basic/Statistics.cpp
-lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /usr/lib/llvm-6.0/include/llvm/Support/DataTypes.h
+lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /usr/lib/llvm-10/include/llvm-c/DataTypes.h
+lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: /usr/lib/llvm-10/include/llvm/Support/DataTypes.h
 lib/Basic/CMakeFiles/kleeBasic.dir/Statistics.cpp.o: include/klee/Config/config.h
 

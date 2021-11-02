@@ -12,7 +12,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/kleeModule.dir/OptNone.cpp.o"
   "CMakeFiles/kleeModule.dir/PhiCleaner.cpp.o"
   "CMakeFiles/kleeModule.dir/RaiseAsm.cpp.o"
-  "CMakeFiles/kleeModule.dir/WorkaroundLLVMPR39177.cpp.o"
   "../libkleeModule.pdb"
   "../libkleeModule.a"
 )

@@ -96,7 +96,7 @@ unittests/TreeStreamTest: lib/libkleeSupport.a
 unittests/TreeStreamTest: lib/libgtest.a
 unittests/TreeStreamTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/TreeStreamTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-unittests/TreeStreamTest: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+unittests/TreeStreamTest: /usr/lib/llvm-10/lib/libLLVM-10.so
 unittests/TreeStreamTest: unittests/TreeStream/CMakeFiles/TreeStreamTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../TreeStreamTest"
 	cd /build/KLEE/unittests/TreeStream && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TreeStreamTest.dir/link.txt --verbose=$(VERBOSE)

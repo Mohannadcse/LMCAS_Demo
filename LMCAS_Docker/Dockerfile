@@ -12,9 +12,8 @@ RUN echo "Build type set to: Release" && \
     apt-get install -y python3-dev && \
     apt-get install -y python3-pip && \
     apt-get install -y libz3-dev && \
-    apt-get install -y llvm-6.0-dev && \
-    apt-get install llvm-6.0-tool && \
-    apt-get install -y clang-6.0 && \
+    apt-get install -y llvm-10-dev && \
+    apt-get install -y clang-10 && \
     apt-get install -y git && \
     apt-get install -y cmake && \
     apt-get install -y zlib1g-dev && \
@@ -23,7 +22,7 @@ RUN echo "Build type set to: Release" && \
     apt-get install -yqq libboost-dev && \
     apt-get install -y flex && \
     apt-get install -y bison && \
-    apt-get install nano && \
+    apt-get install -y nano && \
     apt-get install -y iputils-ping && \
     apt-get install -y libibverbs-dev  
 
@@ -42,8 +41,8 @@ RUN echo "Download google tests" && \
 RUN echo "Install klee-uclibc" && \
     git clone https://github.com/klee/klee-uclibc.git && \
     cd klee-uclibc && \
-    ./configure --make-llvm-lib --with-llvm-config=/usr/bin/llvm-config-6.0 && \
-    make -j2
+    ./configure --make-llvm-lib --with-llvm-config=/usr/bin/llvm-config-10 && \
+    make 
 
 RUN echo "Install ROPGadget" && \
     pip3 install capstone && \
@@ -67,10 +66,10 @@ COPY testScript.sh testRunDemo.sh
 COPY create_histograms.py create_histograms.py
 
 
-ENV LLVM_CC_NAME clang-6.0
-ENV LLVM_CXX_NAME clang++-6.0
-ENV LLVM_LINK_NAME llvm-link-6.0
-ENV LLVM_AR_NAME llvm-ar-6.0
+ENV LLVM_CC_NAME clang-10
+ENV LLVM_CXX_NAME clang++-10
+ENV LLVM_LINK_NAME llvm-link-10
+ENV LLVM_AR_NAME llvm-ar-10
 ENV LLVM_COMPILER clang
 ENV FORCE_UNSAFE_CONFIGURE=1
 

@@ -95,7 +95,7 @@ unittests/AssignmentTest: lib/libkleaverExpr.a
 unittests/AssignmentTest: lib/libgtest.a
 unittests/AssignmentTest: /usr/lib/x86_64-linux-gnu/libz.so
 unittests/AssignmentTest: /usr/lib/x86_64-linux-gnu/libtcmalloc.so
-unittests/AssignmentTest: /usr/lib/llvm-6.0/lib/libLLVM-6.0.so
+unittests/AssignmentTest: /usr/lib/llvm-10/lib/libLLVM-10.so
 unittests/AssignmentTest: unittests/Assignment/CMakeFiles/AssignmentTest.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/build/KLEE/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../AssignmentTest"
 	cd /build/KLEE/unittests/Assignment && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AssignmentTest.dir/link.txt --verbose=$(VERBOSE)

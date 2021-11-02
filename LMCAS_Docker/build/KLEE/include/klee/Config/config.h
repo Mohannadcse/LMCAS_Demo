@@ -2,7 +2,7 @@
 #define KLEE_CONFIG_H
 
 /* Enable KLEE DEBUG checks */
-/* #undef ENABLE_KLEE_DEBUG */
+#define ENABLE_KLEE_DEBUG 1
 
 /* Enable metaSMT API */
 /* #undef ENABLE_METASMT */
@@ -60,7 +60,7 @@
 /* #undef KLEE_SELINUX_CTX_CONST */
 
 /* LLVM major version number */
-#define LLVM_VERSION_MAJOR 6
+#define LLVM_VERSION_MAJOR 10
 
 /* LLVM minor version number */
 /* #undef LLVM_VERSION_MINOR */
@@ -84,7 +84,7 @@
 /* #undef PACKAGE_VERSION */
 
 /* Use Workaround for LLVM PR39177 (affecting LLVM 3.9 - 7.0.0) */
-#define USE_WORKAROUND_LLVM_PR39177 1
+/* #undef USE_WORKAROUND_LLVM_PR39177 */
 
 /* klee-uclibc is supported */
 #define SUPPORT_KLEE_UCLIBC 1

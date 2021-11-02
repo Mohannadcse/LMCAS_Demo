@@ -17,7 +17,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/KLEE/lib/Module/Optimize.cpp" "/build/KLEE/lib/Module/CMakeFiles/kleeModule.dir/Optimize.cpp.o"
   "/KLEE/lib/Module/PhiCleaner.cpp" "/build/KLEE/lib/Module/CMakeFiles/kleeModule.dir/PhiCleaner.cpp.o"
   "/KLEE/lib/Module/RaiseAsm.cpp" "/build/KLEE/lib/Module/CMakeFiles/kleeModule.dir/RaiseAsm.cpp.o"
-  "/KLEE/lib/Module/WorkaroundLLVMPR39177.cpp" "/build/KLEE/lib/Module/CMakeFiles/kleeModule.dir/WorkaroundLLVMPR39177.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -34,7 +33,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "include"
   "/KLEE/include"
-  "/usr/lib/llvm-6.0/include"
+  "/usr/lib/llvm-10/include"
   )
 
 # Targets to which this target links.
