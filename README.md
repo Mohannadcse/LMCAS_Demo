@@ -33,7 +33,7 @@ We provide the source code of the apps used in the evaluation `after adding the 
 
 # LMCAS Demo
 
-[![tcpdump.png](tcpdump.png)](https://youtu.be/Ov-S1F82GBI)
+[![tcpdump.png](tcpdump.png)](https://youtu.be/4SOxZEBenAw)
 
 # Running LMCAS
 For debloating the artifacts using LMCAS, you need to use the script `runDemo.sh` as follows:
